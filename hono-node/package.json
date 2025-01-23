@@ -1,15 +1,16 @@
 {
-  "name": "hono_demo",
+  "name": "hono-node",
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/index.ts"
   },
   "dependencies": {
     "@hono/node-server": "^1.13.7",
-    "hono": "^4.6.17"
+    "hono": "^4.6.18"
   },
   "devDependencies": {
     "@types/node": "^20.11.17",
+    "prettier": "3.4.2",
     "tsx": "^4.7.1"
   }
 }

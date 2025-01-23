@@ -4,11 +4,11 @@ import { Hono } from 'hono'
 const app = new Hono()
 
 app.get('/', (c) => {
-  // return c.text('Hello Hono!')
-  return c.html('<h1>Hello Hono!</h1>')
+  return c.text('Hello Hono!')
 })
 
-const port = process.env.PORT ? +process.env.PORT : 3000;
+const envPort = process.env.PORT ?? ''
+const port =Number.isNaN(+envPort) ? +envPort:3000
 console.log(`Server is running on http://localhost:${port}`)
 
 serve({
